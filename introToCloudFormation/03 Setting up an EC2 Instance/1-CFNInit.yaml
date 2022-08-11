@@ -8,7 +8,7 @@ Parameters:
 Mappings:
   RegionMap:
     us-east-1:
-      AMI: ami-1853ac65
+      AMI: ami-090fa75af13c156b4
     us-west-1:
       AMI: ami-bf5540df
     eu-west-1:
@@ -30,7 +30,7 @@ Resources:
           files: 
             /var/www/html/index.php:
               content: !Sub |
-                <?php print "Hello world Abs was here!"; ?>
+                <?php print "Jacob ACG was here!"; ?>
           services: 
             sysvinit:
               httpd:

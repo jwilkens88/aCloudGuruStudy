@@ -1,7 +1,7 @@
 Mappings:
   RegionMap:
     us-east-1:
-      AMI: ami-1853ac65
+      AMI: ami-090fa75af13c156b4
     us-west-1:
       AMI: ami-bf5540df
     eu-west-1:
@@ -21,14 +21,14 @@ Resources:
         - !Ref AWS::Region
         - AMI
       SecurityGroups: 
-        - !Ref MySecurityGroup
+        - !Ref ACGsecurityGroup
       Tags:
         - Key: "Name"
           Value: !Join 
             - ""
             - - "EC2 Instance for "
               - !Ref AWS::Region
-  MySecurityGroup:
+  ACGsecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
       GroupDescription: Enable SSH access via port 22
